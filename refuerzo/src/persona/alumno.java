@@ -1,4 +1,4 @@
-package perosna;
+package persona;
 
 public class alumno extends persona {
 	private String nss;

@@ -1,4 +1,4 @@
-package perosna;
+package persona;
 
 public abstract class persona {
 	
@@ -8,25 +8,9 @@ public abstract class persona {
 	
 
 	public persona(String nombre, String apellido, String dni) {
-		setNombre(nombre);
-		setApellido(apellido);
-		setDni(dni);
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getApellido() {
-		return apellido;
-	}
-
-	public void setApellido(String apellido) {
 		this.apellido = apellido;
+		setDni(dni);
 	}
 
 	public String getDni() {
@@ -34,6 +18,9 @@ public abstract class persona {
 	}
 
 	public void setDni(String dni) {
+		if(dni == null || dni.length()<9) {
+			throw new IllegalArgumentException("DNI no valido");
+		}
 		this.dni = dni;
 	}
 	
