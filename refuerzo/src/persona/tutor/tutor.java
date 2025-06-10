@@ -10,5 +10,14 @@ public abstract class tutor extends persona {
 		super(nombre,apellido,dni);
 		this.email = email;
 	}
+	
+	
+	public void setEmail(String email) {
+		this.email=email;
+	}
+	
+	public String getEmail() {
+		return this.email;
+	}
 
 }

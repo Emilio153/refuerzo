@@ -8,13 +8,28 @@ public abstract class persona {
 	
 
 	public persona(String nombre, String apellido, String dni) {
-		this.nombre = nombre;
-		this.apellido = apellido;
+		setNombre(nombre);
+		setApellido(apellido);
 		setDni(dni);
+	}
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	public void setApellido(String apellido) {
+		this.apellido=apellido;
+	}
+	
+	public String getApellido() {
+		return this.apellido;
 	}
 
 	public String getDni() {
-		return dni;
+		return  this.dni;
 	}
 
 	public void setDni(String dni) {
@@ -22,6 +37,15 @@ public abstract class persona {
 			throw new IllegalArgumentException("DNI no valido");
 		}
 		this.dni = dni;
+	}
+	
+	@Override
+	public String toString() {
+		String result ="Persona \n";
+		result+="Nombre: "+this.getNombre() 
+		+"Apellido: "+this.getApellido()
+		+"DNI: "+this.getDni();
+		return result;
 	}
 	
 }
