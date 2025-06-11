@@ -48,4 +48,8 @@ public abstract class persona {
 		return result;
 	}
 	
+	public  void saludar() {
+		System.out.println("Hola soy " + this.getNombre()+ " y soy " + this.getClass());
+	}
+	
 }
