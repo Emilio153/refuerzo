@@ -5,9 +5,9 @@ import persona.enums.Cargo;
 public class tutorLaboral extends tutor{
 	private Cargo cargo;
 	
-	public tutorLaboral(String nombre,String apellido,String dni,String email, String cargo) {
+	public tutorLaboral(String nombre,String apellido,String dni,String email, Cargo cargo) {
 		super(nombre,apellido,dni,email);
-		
+		this.cargo= cargo;
 	}
 	
 	public void setCargo(String cargo) {
@@ -21,11 +21,11 @@ public class tutorLaboral extends tutor{
 	
 	@Override
 	public String toString() {
-		String result= "Tutor Laboral \n";
-		result +="Nombre: "+ this.getNombre()
+		return "Tutor Laboral \n"+
+		"Nombre: "+ this.getNombre()
 		+ "Apellido: " + this.getApellido()
 		+ "DNI: "+ this.getDni()
-		+ "Email: " this.getEmail()
+		+ "Email: " +this.getEmail()
 		+ "Cargo: " + this.getcargo();
 	}
 
